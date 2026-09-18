@@ -1,6 +1,6 @@
-package com.sistema_agendamento.agendamento.repositories;
+package com.sistema_agendamento.agendamento.repository;
 
-import com.sistema_agendamento.agendamento.domain.usuario.Usuario;
+import com.sistema_agendamento.agendamento.model.usuario.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;
