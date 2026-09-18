@@ -1,7 +1,7 @@
-package com.sistema_agendamento.agendamento.domain.atividade;
+package com.sistema_agendamento.agendamento.model.atividade;
 
-import com.sistema_agendamento.agendamento.domain.grupo.Grupo;
-import com.sistema_agendamento.agendamento.domain.usuario.Usuario;
+import com.sistema_agendamento.agendamento.model.grupo.Grupo;
+import com.sistema_agendamento.agendamento.model.usuario.Usuario;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -27,21 +27,29 @@ public class Atividade {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
+    @Column(nullable = false, length = 200)
     private String titulo;
 
+    @Column(columnDefinition = "TEXT")
     private String descricao;
 
+    @Column(nullable = false)
     private LocalDate data;
 
-    private LocalTime hora_inicio;
+    @Column(name = "hora_inicio")
+    private LocalTime horaInicio;
 
-    private LocalTime hora_fim;
+    @Column(name = "hora_fim")
+    private LocalTime horaFim;
 
+    @Column(length = 255)
     private String local;
 
-    private OffsetDateTime created_at;
+    @Column(name= "created_at", nullable = false)
+    private OffsetDateTime createdAt;
 
-    private OffsetDateTime updated_at;
+    @Column(name= "updated_at", nullable = false)
+    private OffsetDateTime updatedAt;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
