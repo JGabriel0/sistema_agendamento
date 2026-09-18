@@ -1,7 +1,7 @@
-package com.sistema_agendamento.agendamento.domain.usuario;
+package com.sistema_agendamento.agendamento.model.usuario;
 
-import com.sistema_agendamento.agendamento.domain.atividade.Atividade;
-import com.sistema_agendamento.agendamento.domain.grupo.Grupo;
+import com.sistema_agendamento.agendamento.model.atividade.Atividade;
+import com.sistema_agendamento.agendamento.model.grupo.Grupo;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -25,19 +25,26 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
+    @Column(nullable = false, length = 150)
     private String nome;
 
+    @Column(nullable = false, length = 255)
     private String email;
 
+    @Column(nullable = false, length = 255)
     private String senha;
 
+    @Column(nullable = false)
     private Boolean admin;
 
+    @Column(nullable = false)
     private Boolean ativo;
 
-    private OffsetDateTime created_at;
+    @Column(name = "created_at", nullable = false)
+    private OffsetDateTime createdAt;
 
-    private OffsetDateTime updated_at;
+    @Column(name = "updated_at", nullable = false)
+    private OffsetDateTime updatedAt;
 
     @ManyToOne
     @JoinColumn(name = "grupo_id", nullable = false)

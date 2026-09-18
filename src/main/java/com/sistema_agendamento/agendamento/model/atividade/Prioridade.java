@@ -1,4 +1,4 @@
-package com.sistema_agendamento.agendamento.domain.atividade;
+package com.sistema_agendamento.agendamento.model.atividade;
 
 public enum Prioridade {
     BAIXA,
