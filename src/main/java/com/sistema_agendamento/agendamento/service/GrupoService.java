@@ -1,8 +1,8 @@
 package com.sistema_agendamento.agendamento.service;
 
-import com.sistema_agendamento.agendamento.dto.GrupoCreateRequest;
-import com.sistema_agendamento.agendamento.dto.GrupoResponse;
-import com.sistema_agendamento.agendamento.dto.GrupoUpdateRequest;
+import com.sistema_agendamento.agendamento.dto.grupo.GrupoCreateRequest;
+import com.sistema_agendamento.agendamento.dto.grupo.GrupoResponse;
+import com.sistema_agendamento.agendamento.dto.grupo.GrupoUpdateRequest;
 import com.sistema_agendamento.agendamento.mapper.GrupoMapper;
 import com.sistema_agendamento.agendamento.model.grupo.Grupo;
 import com.sistema_agendamento.agendamento.repository.GrupoRepository;

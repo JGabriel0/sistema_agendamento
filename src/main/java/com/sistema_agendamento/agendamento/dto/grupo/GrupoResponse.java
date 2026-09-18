@@ -1,4 +1,4 @@
-package com.sistema_agendamento.agendamento.dto;
+package com.sistema_agendamento.agendamento.dto.grupo;
 
 import java.time.OffsetDateTime;
 import java.util.UUID;
